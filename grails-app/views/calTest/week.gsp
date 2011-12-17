@@ -11,7 +11,7 @@
 <head>
     <jqueryCalendar:weekResources />
     <r:layoutResources />
-  <title>title1</title>
+  <title>title1 test</title>
 </head>
 <body>
 
