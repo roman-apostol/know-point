@@ -9,7 +9,7 @@
         <meta name="keywords" content="" />
         <meta property="fb:app_id" content="111891482183773" />        
         <link rel="shortcut icon" href="/favicon.ico" />
-        <link rel="stylesheet" type="text/css" href="http://cdn2.styleseat.com/static/css/min/ssnew.16e553d7.css">
+        <link rel="stylesheet" type="text/css" href="main.css">
 
         <!--[if lt IE 9]>
         <script src="http://html5shiv.googlecode.com/svn/trunk/html5.js"></script>
@@ -123,7 +123,7 @@ $j(document).ready(function(){
     
         <!-- start:loggedOutHeader -->
 		    <header id="siteHeader" role="banner">
-		      <h1><a href="/"><img id="logoLight" width="200" height="38" src="logo.png" alt="StyleSeat"/></a></h1>
+		      <h1><a href="/"><img  id="logoLight" width="200" height="38" src="logo.png" alt="Znaniye"/></a></h1>
 		      <nav id="siteNav" role="navigation">
 		        <ul>
 		          
@@ -185,11 +185,16 @@ $j(document).ready(function(){
 	                    <form action="/search" method="GET">
 		                    <div id="searchBar">
                           <h1><span class="teal">Найдите</span> и <span class="teal">запишитесь</span> на курсы возле Вас</h1>
-			                    <input id="searchWord" type="text" name="q" class="bigBox" value="search" onfocus="if(this.value=='Hair cut') {this.value='';}"/>
-			                    <label for="searchLocation">Возле</label>
+<br/>
+<div>
+	<i>Пример: <a href = '' style = "border-bottom:1px dotted;">курсы английского в голосеевском районе по четвергам после 18:00 цена до 600 грн.</a></i>
+	
+	</div>
+			                    <input id="searchWord" type="text" name="q" class="bigBox" value="поиск" onfocus="if(this.value=='Hair cut') {this.value='';}"/>
+			                    <!--<label for="searchLocation">Возле</label>
 			                    <input id="searchLocation" type="text"  class="bigBox" name="loc" onfocus="if(this.value=='City, State or Zip') {this.value='';}"
                                        value="Kiev, 13" />
-			
+									-->
 			                    <input id="searchButton" class="greenActionButton" type="submit" name="search" value="Поиск">
 		                    </div>
 	                    </form>
@@ -254,7 +259,10 @@ $j(document).ready(function(){
                         
 
 
-                        </aside>                    
+                        </aside>     
+<center>
+<iframe width="625" height="450" frameborder="0" scrolling="no" marginheight="40px" marginwidth="40px" src="http://maps.google.com/?ie=UTF8&amp;ll=50.43627,30.535297&amp;spn=0.016237,0.045147&amp;t=h&amp;z=15&amp;vpsrc=6&amp;output=embed"></iframe><br /><small><a href="http://maps.google.com/?ie=UTF8&amp;ll=50.43627,30.535297&amp;spn=0.016237,0.045147&amp;t=h&amp;z=15&amp;vpsrc=6&amp;source=embed" style="color:#0000FF;text-align:left">View Larger Map</a></small>
+</center>               
                     <!--
                         <iframe src="/provider/featured" scrolling="no" frameborder="0" style="border:none; overflow:hidden; width: 670px; float:left; height: 615px;" allowTransparency="false"></iframe>
                         <!--
