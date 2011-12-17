@@ -8,6 +8,6 @@ class SchoolGroup {
     static hasOne = [schedule:Schedule]
     static hasMany = [events: Event]
     static constraints = {
-        level ( inList: "Elementary", "Preintermediate", "Intermediate", "Upper Intermediate", "Advanced")
+        level(inList: ["Elementary", "Preintermediate", "Intermediate", "Upper Intermediate", "Advanced"])
     }
 }
