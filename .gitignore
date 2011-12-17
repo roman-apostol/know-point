@@ -1,3 +1,4 @@
 *.iml
 /know-point
 .idea/**
+*.class
