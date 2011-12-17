@@ -8,7 +8,6 @@
         <meta property="fb:app_id" content="111891482183773" />        
         <link rel="shortcut icon" href="/favicon.ico" />
         <link rel="stylesheet" type="text/css" href="main.css">
- <link rel="stylesheet" type="text/css" href="test.css">
 
         <!--[if lt IE 9]>
         <script src="http://html5shiv.googlecode.com/svn/trunk/html5.js"></script>
@@ -123,7 +122,32 @@ $j(document).ready(function(){
         <!-- start:loggedOutHeader -->
 		    <header id="siteHeader" role="banner">
 		      <h1><a href="/"><img  id="logoLight" width="200" height="38" src="logo.png" alt="Znaniye"/></a></h1>
-
+		      <nav id="siteNav" role="navigation">
+		        <ul>
+		          
+		          <li class="siteNavItem"><a href="/search">Все курсы</a></li>
+		          <li class="siteNavItem "><a href="/photos">Расширенный поиск</a></li>
+		          <li class="siteNavItem " id="searchBox">
+		            <form id="nav_var_search" method="GET" action="/search" role="search">
+		                <fieldset>
+		                    <div class="fields">
+		                        <input id="nav_bar_search_q" type="text" name="q" placeholder="pro search" value="pro search" tabindex="-1" onclick="this.value = '';"/>
+		                    </div><!--end:-->
+		                    <div class="actions searchActions">
+		                        <button type="get">поиск</button>
+		                    </div><!--end:actions-->
+		                </fieldset>
+		            </form>
+		           <!-- <script language="javascript">
+		                //$j(document).ready(function(){
+		                //    $j('#id="nav_bar_search_q').val('');
+		                //});
+		            </script>
+					-->
+		            </li><!--end:searchBox-->
+		          
+		        </ul>
+		      </nav><!--end:nav-->
              
 		      <ul id="tools">
 		        <li class="it01"><div class="padMe"><a href="/signup">Внести свою школу</a></div></li>
@@ -142,8 +166,8 @@ $j(document).ready(function(){
 
                     <div id="searchBlock" class="fullWidth hpHeader">
 	                    <form action="/search" method="GET">
-		                    <div id="searchBar2">
-                          <!--<h1><span class="teal">Найдите</span> и <span class="teal">запишитесь</span> на курсы возле Вас</h1> -->
+		                    <div id="searchBar">
+                          <h1><span class="teal">Найдите</span> и <span class="teal">запишитесь</span> на курсы возле Вас</h1>
 <br/>
 <div>
 	<i>Пример: <a href = '' style = "border-bottom:1px dotted;">курсы английского в голосеевском районе по четвергам после 18:00 цена до 600 грн.</a></i>
@@ -155,22 +179,6 @@ $j(document).ready(function(){
                                        value="Kiev, 13" />
 									-->
 			                    <input id="searchButton" class="greenActionButton" type="submit" name="search" value="Поиск">
-			<br/>
-					<ul>
-					<li class="siteNavItem"></li>         
-										     
-					 <li class="siteNavItem"><a href="/search"></a></li>
-					          <li class="siteNavItem "><a href="/photos"></a></li>
-					</ul>
-						<ul>
-						<li class="siteNavItem"></li>         
-					     
-					 <li class="siteNavItem"><a class= "rbutton" href="/search">Все курсы</a></li>
-									<li class="siteNavItem">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</li> 
-									<li class="siteNavItem">&nbsp;</li> 
-									<li class="siteNavItem">&nbsp;</li>
-						          <li class="siteNavItem "><a class= "rbutton" href="/photos">Расширенный поиск</a></li>
-						</ul>
 		                    </div>
 	                    </form>
                     </div>
@@ -192,12 +200,6 @@ $j(document).ready(function(){
 
                         </aside>     
 <center>
-	<br/>
-		<br/>
-			<br/>
-				<br/>
-					<br/>
-						<br/>
 <iframe width="625" height="450" frameborder="0" scrolling="no" marginheight="40px" marginwidth="40px" src="http://maps.google.com/?ie=UTF8&amp;ll=50.43627,30.535297&amp;spn=0.016237,0.045147&amp;t=m&amp;z=15&amp;vpsrc=6&amp;output=embed"></iframe><br /><small><a href="http://maps.google.com/?ie=UTF8&amp;ll=50.43627,30.535297&amp;spn=0.016237,0.045147&amp;t=m&amp;z=15&amp;vpsrc=6&amp;source=embed" style="color:#0000FF;text-align:left">Большая карта</a></small>
 </center>               
                     <!--
