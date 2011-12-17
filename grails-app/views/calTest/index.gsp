@@ -11,6 +11,8 @@
 <head>
     %{--<fullcal:resources debug="true"/>--}%
     <jqueryCalendar:monthResources />
+
+
     <r:layoutResources />
     <title>index.gsp of caltest</title>
 </head>
@@ -33,6 +35,10 @@
         abbrevDayHeadings="${false}"
         title="${true}"
         showTime="guess" />
+
+
+
+
 
 <h1>cal after here!!!</h1>
 </body>
