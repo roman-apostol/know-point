@@ -6,5 +6,6 @@ class SearchResultsController {
         def searchQuery = params.searchQuery;
         println searchQuery;
         [groups: SchoolGroup.getAll()]
+
     }
 }

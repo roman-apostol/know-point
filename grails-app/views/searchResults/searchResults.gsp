@@ -228,16 +228,15 @@
         </section>
         <section id="results" class="fullWidth">
 
-            <g:each it="group" in="${groups}" >
+            <g:each in="${groups}" >
 
             <article id="ss7715" class="resultItem result">
                 <div class="left resultLeft">
                     <div class="right">
                         <ul class="featureIconList">
-                            <li><a href="/sherryreyesashe" target="_blank" onMouseDown="return clk(this, 1, 7715, 650021);"><img title="Accepting Online Bookings" alt="Accepting Online Bookings" src="http://cdn4.styleseat.com/static/new/images/search_ob_teal.6d4e9a6b.png" style="padding-left:3px;vertical-align:sub;"/></a></li>
 
 
-                            <li>$$</li>
+                            <li> ${it.price} UAH</li>
                         </ul>
                     </div>
 
@@ -250,24 +249,26 @@
                         <h3 class="resultTitle">
 
                             <a href="/sherryreyesashe" target="_blank"
-                               onMouseDown="return clk(this, 1, 7715, 650021);">${group.name}</a>
+                               onMouseDown="return clk(this, 1, 7715, 650021);"></a>
 
                         </h3>
-                        <span class="resultTagline" style="margin-bottom:19px">Бизнес английский  | <span class="resultBusiness">Обучение</span> </span>
+                        <span class="resultTagline" style="margin-bottom:19px">${it.name}</span> </span>
                         <table>
+                            <g:each var="event" in="${it.schedules.asList()[0].events.asList()}" >
                             <tr>
                                 <td>
-                                    Понедельник:
+                                    ${event.weekDay}:
                                 </td>
                             </tr>
                             <tr>
                                 <td>
-                                    <b>От 14:00 до 19:10 </b>
+                                    <b>От ${event.startHour}:${event.startMinute}0 до ${event.startHour+event.duration}:${event.startMinute}0 </b>
                                 </td>
                             </tr>
+                            </g:each>
                         </table>
-                        <p class="stylistAddress">							            Учитель: <a href ="" style="color:blue;"> Kevin hudson</a><br/>
-                            Сєченова 6<br/>
+                        <p class="stylistAddress">Учитель: <a href ="" style="color:blue;"> Kevin hudson</a><br/>
+                            <br/>
                         </p>
 
                         <a class="viewMap" title="Click to view map" target="_map" target="_blank"
@@ -286,14 +287,7 @@
                     </div>
 
                 </div>
-                <!--      <div class="recommends">
-
-					          <div class="clearfix recommendsCount"><a target="_blank" href="/sherryreyesashe">1 Отзыв</a></div>
-
-
-
-					        </div>-->
-            </article>
+                 </article>
 
            </g:each>
 

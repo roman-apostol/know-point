@@ -13,7 +13,8 @@ class School {
 
 
 
-    static hasMany = [teachers: Teacher]
+    static hasMany = [groups: SchoolGroup, teachers: Teacher]
+
     static constraints = {
         name (blank: false, unique: true)
         address (blank:  false)

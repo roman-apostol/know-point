@@ -6,10 +6,10 @@ class SchoolGroup {
     String level
     double price
     String name
+    Schedule schedule
 
-
-    static hasMany = [events: Event]
     static constraints = {
         level(inList: ["Elementary", "Pre Intermediate", "Intermediate", "Upper Intermediate", "Advanced"])
+        schedule(nullable: true)
     }
 }

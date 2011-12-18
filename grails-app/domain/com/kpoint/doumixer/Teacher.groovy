@@ -4,8 +4,8 @@ class Teacher {
     int id
     String name
     String description
-
-    static belongsTo = [school: School]
+    School school
+    
     static hasMany = [events: Event]
     static constraints = {
         name (blank: false)
