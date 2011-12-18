@@ -202,7 +202,7 @@
 
 
         <div class="facebookBlock banner">
-            <iframe width="300" height="300" frameborder="0" scrolling="no" marginheight="40px" marginwidth="40px" src="http://maps.google.com/?ie=UTF8&amp;ll=50.43627,30.535297&amp;spn=0.016237,0.045147&amp;t=h&amp;z=15&amp;vpsrc=6&amp;output=embed"></iframe><br /><small><a href="http://maps.google.com/?ie=UTF8&amp;ll=50.43627,30.535297&amp;spn=0.016237,0.045147&amp;t=h&amp;z=15&amp;vpsrc=6&amp;source=embed" style="color:#0000FF;text-align:left">View Larger Map</a></small>
+            <iframe width="300" height="300" frameborder="0" scrolling="no" marginheight="40px" marginwidth="40px" src="http://maps.google.com/?ie=UTF8&amp;ll=50.469743,30.51178&amp;spn=0.016237,0.045147&amp;t=m&amp;z=10&amp;vpsrc=6&amp;output=embed"></iframe><br /><small><a href="http://maps.google.com/?ie=UTF8&amp;ll=50.43627,30.535297&amp;spn=0.016237,0.045147&amp;t=h&amp;z=15&amp;vpsrc=6&amp;source=embed" style="color:#0000FF;text-align:left">View Larger Map</a></small>
         </div>
 
 
@@ -245,7 +245,7 @@
                     </div>
 
                     <a href="/sherryreyesashe" target="_blank" class="avatarLink"
-                       onMouseDown="return clk(this, 1, 7715, 650021);"><img src=${resource(dir: 'images/random/', file: i + ".jpeg")} src="http://www.speak-up.com.ua/public/themes/speak-up/images/menu_15.jpg" width="100" height="100"/></a>
+                       onMouseDown="return clk(this, 1, 7715, 650021);"><img src=${resource(dir: 'images/random/', file: i + ".jpeg")} width="100" height="100"/></a>
 
 
                     <div class="left" style="max-width:300px;">
@@ -287,7 +287,7 @@
                         <br/>
                         <br/>
 
-                        <li class="siteNavItem"><ul><a class ="rbutton" href="" style="color:white;">ПРИСОЕДИНИТСЯ&nbsp;&nbsp;</a></ul></li>
+                        <li class="siteNavItem"><ul><a class ="rbutton" href="#" style="color:white;" onclick="alert('Спасибо! Вы зарегистрировались на этот курс');">ПРИСОЕДИНИТСЯ&nbsp;&nbsp;</a></ul></li>
                     </div>
 
                 </div>

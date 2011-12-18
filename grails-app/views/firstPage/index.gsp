@@ -148,8 +148,8 @@
                         <!--<h1><span class="teal">Найдите</span> и <span class="teal">запишитесь</span> на курсы возле Вас</h1> -->
                         <br/>
                         <div>
-                            <i>Пример: <a href = '#' onclick="document.form1.q.value='курсы английского в голосеевском районе по четвергам после 18:00 цена до 600 грн.'; document.form1.submit();" style = "border-bottom:1px dotted;">курсы английского в голосеевском районе по четвергам после 18:00 цена до 600 грн.</a></i>
-
+                            <!--<i>Пример: <a href = '#' onclick="document.form1.q.value='курсы английского в голосеевском районе по четвергам после 18:00 цена до 600 грн.'; document.form1.submit();" style = "border-bottom:1px dotted;">курсы английского в голосеевском районе по четвергам после 18:00 цена до 600 грн.</a></i>
+                                -->
                         </div>
                         <input id="searchWord" type="text" name="q" class="bigBox" value="" onfocus="if(this.value=='Hair cut') {this.value='';}"/>
                         <!--<label for="searchLocation">Возле</label>
@@ -200,7 +200,7 @@
                     <br/>
                     <br/>
                     <br/>
-                    <iframe width="625" height="450" frameborder="0" scrolling="no" marginheight="40px" marginwidth="40px" src="http://maps.google.com/?ie=UTF8&amp;ll=50.43627,30.535297&amp;spn=0.016237,0.045147&amp;t=m&amp;z=15&amp;vpsrc=6&amp;output=embed"></iframe><br /><small><a href="http://maps.google.com/?ie=UTF8&amp;ll=50.43627,30.535297&amp;spn=0.016237,0.045147&amp;t=m&amp;z=15&amp;vpsrc=6&amp;source=embed" style="color:#0000FF;text-align:left">Большая карта</a></small>
+                    <iframe width="625" height="450" frameborder="0" scrolling="no" marginheight="40px" marginwidth="40px" src="http://maps.google.com/?ie=UTF8&amp;ll=50.469743,30.51178&spn=0.545011,1.454315&amp;t=m&amp;z=10&amp;vpsrc=6&amp;output=embed"></iframe><br /><small><a href="http://maps.google.com/?ie=UTF8&amp;ll=50.43627,30.535297&amp;spn=0.016237,0.045147&amp;t=m&amp;z=15&amp;vpsrc=6&amp;source=embed" style="color:#0000FF;text-align:left">Большая карта</a></small>
                 </center>
                 <!--
                         <iframe src="/provider/featured" scrolling="no" frameborder="0" style="border:none; overflow:hidden; width: 670px; float:left; height: 615px;" allowTransparency="false"></iframe>
