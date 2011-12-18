@@ -15,33 +15,28 @@ import java.util.Date;
  */
 public class Location {
 
-    private ArrayList<Integer> days = new ArrayList<Integer>();
-    private Date date = null;
-    private ArrayList<String> times = new ArrayList<String>();
-
-    public static final String DATE_FORMAT_NOW = "yyyy-MM-dd HH:mm:ss";
-
+    private ArrayList<String> regions = new ArrayList<String>();
+    private ArrayList<String> streets = new ArrayList<String>();
 
     public boolean equals(Time t) {
         return false;
     }
 
-    private static String now() {
-        Calendar cal = Calendar.getInstance();
-        SimpleDateFormat sdf = new SimpleDateFormat("yyyy-MM-dd HH:mm:ss");
-        return sdf.format(cal.getTime());
-
-    }
-
     public void addWord(String word, Token token) {
         System.out.println(word + " " + token.getType());
 
+        tokens.put("рядо", new Token("рядо", "рядом", Context.LOCATION, "near", Type.NEAR));
+        tokens.put("возл", new Token("возл", "возле", Context.LOCATION, "near", Type.NEAR));
+        tokens.put("здесь", new Token("здесь", "здесь", Context.LOCATION, "1", Type.REGION));
+        tokens.put("голосе", new Token("голосе", "голосеево", Context.LOCATION, "1", Type.REGION));
+        tokens.put("троещ", new Token("троещ", "троещина", Context.LOCATION, "2", Type.REGION));
+
         switch (token.getType()) {
-            case DAY: days.add(Integer.parseInt(token.getProperties()));
+            case REGION: regions.add(token.getProperties());
                 break;
-            case NOW: date = Calendar.getInstance().getTime();
+            case STREET: streets.add(token.getProperties());
                 break;
-            case TIME: times.add(word); Collections.sort(times);
+            case NEAR:
                 break;
         }
     }
