@@ -148,10 +148,10 @@
                         <!--<h1><span class="teal">Найдите</span> и <span class="teal">запишитесь</span> на курсы возле Вас</h1> -->
                         <br/>
                         <div>
-                            <i>Пример: <a href = '' style = "border-bottom:1px dotted;">курсы английского в голосеевском районе по четвергам после 18:00 цена до 600 грн.</a></i>
+                            <i>Пример: <a href = '#' onclick="document.form1.q.value='курсы английского в голосеевском районе по четвергам после 18:00 цена до 600 грн.'; document.form1.submit();" style = "border-bottom:1px dotted;">курсы английского в голосеевском районе по четвергам после 18:00 цена до 600 грн.</a></i>
 
                         </div>
-                        <input id="searchWord" type="text" name="q" class="bigBox" value="поиск" onfocus="if(this.value=='Hair cut') {this.value='';}"/>
+                        <input id="searchWord" type="text" name="q" class="bigBox" value="" onfocus="if(this.value=='Hair cut') {this.value='';}"/>
                         <!--<label for="searchLocation">Возле</label>
 			                    <input id="searchLocation" type="text"  class="bigBox" name="loc" onfocus="if(this.value=='City, State or Zip') {this.value='';}"
                                        value="Kiev, 13" />
@@ -167,11 +167,11 @@
                         <ul>
                             <li class="siteNavItem"></li>
 
-                            <li class="siteNavItem"><a class= "rbutton" href="#" onclick="document.form1.submit()">Все курсы</a></li>
+                            <li class="siteNavItem"><a class= "rbutton" href="#" onclick="document.form1.submit();">Все курсы</a></li>
                             <li class="siteNavItem">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</li>
                             <li class="siteNavItem">&nbsp;</li>
                             <li class="siteNavItem">&nbsp;</li>
-                            <li class="siteNavItem "><a class= "rbutton" href="/photos">Расширенный поиск</a></li>
+                            <li class="siteNavItem "><a class= "rbutton" href="#">Расширенный поиск</a></li>
                         </ul>
                     </div>
                 </g:form>
