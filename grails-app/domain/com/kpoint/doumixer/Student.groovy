@@ -10,7 +10,7 @@ class Student {
 
     static constraints = {
         age (max: 100, min : 1)
-        gender (inList: ["Муж", "Жен"])
+        gender (inList: ["Male", "Female"])
         name (blank: false)
     }
 }
