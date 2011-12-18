@@ -229,10 +229,12 @@
             </header>
         </section>
         <section id="results" class="fullWidth">
-
+            <g:set var="i" value="0" />
             <g:each var="group" in="${groups}" >
+                <% i++ %>
 
-            <article id="ss7715" class="resultItem result">
+
+                <article id="ss7715" class="resultItem result">
                 <div class="left resultLeft">
                     <div class="right">
                         <ul class="featureIconList">
@@ -243,11 +245,11 @@
                     </div>
 
                     <a href="/sherryreyesashe" target="_blank" class="avatarLink"
-                       onMouseDown="return clk(this, 1, 7715, 650021);"><img src="http://www.speak-up.com.ua/public/themes/speak-up/images/menu_15.jpg" width="100" height="100"/></a>
+                       onMouseDown="return clk(this, 1, 7715, 650021);"><img src=${resource(dir: 'images/random/', file: i + ".jpeg")} src="http://www.speak-up.com.ua/public/themes/speak-up/images/menu_15.jpg" width="100" height="100"/></a>
 
 
                     <div class="left" style="max-width:300px;">
-                        <span class="resultNumber">1.</span>
+                        <span class="resultNumber">${i}.</span>
                         <h3 class="resultTitle">
 
                             <a href="/sherryreyesashe" target="_blank"
