@@ -1,0 +1,18 @@
+12-18 10:38:49 jdbc[2]: exception
+org.h2.jdbc.JdbcSQLException: Value too long for column "SCHOOL_TYPE VARCHAR(11) NOT NULL": "STRINGDECODE('\u0411\u0438\u0437\u043d\u0435\u0441 \u0430\u043d\u0433\u043b\u0438\u0439\u0441\u043a\u0438\u0439') (17)"; SQL statement:
+insert into school (id, version, address, email, latitude, longitude, name, phone_number, region, school_type) values (null, ?, ?, ?, ?, ?, ?, ?, ?, ?) [90005-147]
+12-18 10:42:18 jdbc[2]: exception
+org.h2.jdbc.JdbcSQLException: Value too long for column "SCHOOL_TYPE VARCHAR(11) NOT NULL": "STRINGDECODE('\u0411\u0438\u0437\u043d\u0435\u0441 \u0430\u043d\u0433\u043b\u0438\u0439\u0441\u043a\u0438\u0439') (17)"; SQL statement:
+insert into school (id, version, address, email, latitude, longitude, name, phone_number, region, school_type) values (null, ?, ?, ?, ?, ?, ?, ?, ?, ?) [90005-147]
+12-18 10:50:20 jdbc[2]: exception
+org.h2.jdbc.JdbcSQLException: Value too long for column "SCHOOL_TYPE VARCHAR(11) NOT NULL": "'Business English' (16)"; SQL statement:
+update school set version=?, address=?, email=?, latitude=?, longitude=?, name=?, phone_number=?, region=?, school_type=? where id=? and version=? [90005-147]
+12-18 10:51:31 jdbc[2]: exception
+org.h2.jdbc.JdbcSQLException: Value too long for column "SCHOOL_TYPE VARCHAR(11) NOT NULL": "'Business English' (16)"; SQL statement:
+update school set version=?, address=?, email=?, latitude=?, longitude=?, name=?, phone_number=?, region=?, school_type=? where id=? and version=? [90005-147]
+12-18 10:51:49 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLException: Value too long for column "SCHOOL_TYPE VARCHAR(11) NOT NULL": "'Business English' (16)"; SQL statement:
+update school set version=?, address=?, email=?, latitude=?, longitude=?, name=?, phone_number=?, region=?, school_type=? where id=? and version=? [90005-147]
+12-18 10:52:01 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLException: Value too long for column "SCHOOL_TYPE VARCHAR(11) NOT NULL": "'Business English' (16)"; SQL statement:
+update school set version=?, address=?, email=?, latitude=?, longitude=?, name=?, phone_number=?, region=?, school_type=? where id=? and version=? [90005-147]
