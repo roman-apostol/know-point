@@ -4,10 +4,12 @@ class CalTestController {
 
     def index() { }
     def week(){
-        [ date:new Date(), readOnly:false ];
+        def itemList = []
+        [ date:new Date(), readOnly:true ];
     }
     def day(){
         [ date:new Date(), readOnly:false ];
     }
+
 
 }

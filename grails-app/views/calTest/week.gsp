@@ -10,15 +10,31 @@
 <html>
 <head>
     <jqueryCalendar:weekResources />
+    <jqueryui:javascript/>
     <r:layoutResources />
-  <title>title1 test</title>
+  <title>week page</title>
 </head>
 <body>
 
-<j
 
-<jqueryCalendar:week date="${date}" readonly="${readOnly}" allowCalEventOverlap="${true}" timeslotsPerHour="${4}"
-                     firstDayOfWeek="${1}" startHour="${8}" endHour="${22}" limitDisplay="${true}" height="${600}"/>
+
+<jqueryCalendar:week id="cal1" date="${date}" readonly="${readOnly}" allowCalEventOverlap="${true}" timeslotsPerHour="${4}"
+                     firstDayOfWeek="${1}" startHour="${8}" endHour="${22}" limitDisplay="${true}" height="${600}"
+controller=""/>
+
+%{--<div id="drag1" class="ui-widget-content" style="width:20%;">
+    <p>Item</p>
+</div>--}%
+
+<script type="text/javascript">
+   $(function(){
+//       $('#drag1').draggable();
+
+       $('#jq_week_calendar').mouseup(function() {
+           $('#jq_week_calendar').weekCalendar()
+       });
+   });
+</script>
 
 </body>
 </html>
