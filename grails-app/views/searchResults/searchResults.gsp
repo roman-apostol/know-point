@@ -18,8 +18,8 @@
     <meta name="keywords" content="" />
     <meta property="fb:app_id" content="111891482183773" />
     <link rel="shortcut icon" href="/favicon.ico" />
-    <link rel="stylesheet" type="text/css" href="main.css">
-    <link rel="stylesheet" type="text/css" href="test.css" />
+    <link rel="stylesheet" type="text/css" href="${resource(dir: 'css', file: 'main2.css')}">
+    <link rel="stylesheet" type="text/css" href="${resource(dir: 'css', file: 'test.css')}">
 
     <style>
     .dashboardTop, #searchBox { display:none !important; }
@@ -129,7 +129,7 @@
 
 <!-- start:loggedOutHeader -->
 <header id="siteHeader" role="banner">
-    <h1><a href="/"><img  id="logoLight" width="200" height="38" src="logo.png" alt="Znaniye"/></a></h1>
+    <h1><a href="/"><img  id="logoLight" width="200" height="38" src="${resource(dir: 'images', file: 'logo.png')}" alt="Znaniye"/></a></h1>
     <nav id="siteNav" role="navigation">
         <ul>
 
@@ -228,6 +228,7 @@
         </section>
         <section id="results" class="fullWidth">
 
+            <g:each it="group" in="${groups}" >
 
             <article id="ss7715" class="resultItem result">
                 <div class="left resultLeft">
@@ -240,7 +241,6 @@
                         </ul>
                     </div>
 
-
                     <a href="/sherryreyesashe" target="_blank" class="avatarLink"
                        onMouseDown="return clk(this, 1, 7715, 650021);"><img src="http://www.speak-up.com.ua/public/themes/speak-up/images/menu_15.jpg" width="100" height="100"/></a>
 
@@ -250,7 +250,7 @@
                         <h3 class="resultTitle">
 
                             <a href="/sherryreyesashe" target="_blank"
-                               onMouseDown="return clk(this, 1, 7715, 650021);">Вечерняя группа: Speack up language schools</a>
+                               onMouseDown="return clk(this, 1, 7715, 650021);">${group.name}</a>
 
                         </h3>
                         <span class="resultTagline" style="margin-bottom:19px">Бизнес английский  | <span class="resultBusiness">Обучение</span> </span>
@@ -295,7 +295,7 @@
 					        </div>-->
             </article>
 
-
+           </g:each>
 
 
         </section>

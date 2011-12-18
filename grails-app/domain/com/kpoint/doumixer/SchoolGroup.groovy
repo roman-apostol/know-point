@@ -4,8 +4,10 @@ class SchoolGroup {
 
     int id
     String level
+    double price
+    String name
 
-    static hasOne = [schedule:Schedule]
+
     static hasMany = [events: Event]
     static constraints = {
         level(inList: ["Elementary", "Pre Intermediate", "Intermediate", "Upper Intermediate", "Advanced"])

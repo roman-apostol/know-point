@@ -7,8 +7,6 @@ class Schedule {
     Date endDate
 
     static hasMany = [events:Event]
-    static hasOne = [schoolGroup:SchoolGroup]
-
     static constraints = {
         startDate (blank:false)
         endDate (blank: false)
