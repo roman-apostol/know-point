@@ -1,6 +1,7 @@
 package com.kpoint.doumixer
 
 import com.kpoint.doumixer.nlp.SearchQuery
+import org.apache.commons.collections.ListUtils
 
 class SearchResultsController {
 

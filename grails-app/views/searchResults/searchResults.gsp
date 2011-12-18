@@ -181,10 +181,12 @@
                 <li class="siteNavItem "><a class= "rbutton" href="/photos">Расширенный поиск</a></li>
             </ul><br/>
             <div>
-                <i><br/><br/>Пример: <a href = '' style = "border-bottom:1px dotted;">курсы английского в голосеевском районе по четвергам после 18:00 цена до 600 грн.</a></i>
+                <i><br/><br/>Пример: <a href = '' style = "border-bottom:1px dotted;"
+                    onclick="document.form1.q.value='курсы английского в голосеевском районе по четвергам после 18:00 цена до 600 грн.'; document.form1.submit();">
+                    курсы английского в голосеевском районе по четвергам после 18:00 цена до 600 грн.</a></i>
 
             </div>
-            <input id="searchWord" type="text" name="q" class="bigBox" value="поиск" onfocus="if(this.value=='Hair cut') {this.value='';}"/>
+            <input id="searchWord" type="text" name="q" class="bigBox" value="поиск" class="greenActionButton" type="submit" name="search" />
             <input id="searchButton" class="greenActionButton" type="submit" name="search" value="Поиск">
         </div>
     </form>
@@ -228,7 +230,7 @@
         </section>
         <section id="results" class="fullWidth">
 
-            <g:each in="${groups}" >
+            <g:each var="group" in="${groups}" >
 
             <article id="ss7715" class="resultItem result">
                 <div class="left resultLeft">
@@ -236,7 +238,7 @@
                         <ul class="featureIconList">
 
 
-                            <li> ${it.price} UAH</li>
+                            <li> ${group.price} UAH</li>
                         </ul>
                     </div>
 
@@ -252,9 +254,9 @@
                                onMouseDown="return clk(this, 1, 7715, 650021);"></a>
 
                         </h3>
-                        <span class="resultTagline" style="margin-bottom:19px">${it.name}</span> </span>
+                        <span class="resultTagline" style="margin-bottom:19px">${group.name}</span> </span>
                         <table>
-                            <g:each var="event" in="${it.schedules.asList()[0].events.asList()}" >
+                            <g:each var="event" in="${group.schedule.events}" >
                             <tr>
                                 <td>
                                     ${event.weekDay}:
@@ -267,7 +269,7 @@
                             </tr>
                             </g:each>
                         </table>
-                        <p class="stylistAddress">Учитель: <a href ="" style="color:blue;"> Kevin hudson</a><br/>
+                        <p class="stylistAddress">Учитель: <a href ="" style="color:blue;"> ${group.schedule.events.asList()[0].teacher.name}</a><br/>
                             <br/>
                         </p>
 
