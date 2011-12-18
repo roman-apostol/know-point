@@ -25,7 +25,10 @@
     .dashboardTop, #searchBox { display:none !important; }
     </style>
 
-
+    <g:javascript library="jquery" plugin="jquery"/>
+    <r:require module="jquery-ui"/>
+    <jqueryui:javascript/>
+    <r:layoutResources />
 </head>
 <body id="pgHomepage">
 
@@ -169,7 +172,7 @@
 
 <div id="searchBlock" class="fullWidth hpHeader">
     <form action="/search" method="GET">
-        <div id="searchBar2" style = "height 100px;">
+        <div id="searchBar2" style = "height: 100px;">
 
             <ul>
                 <li class="siteNavItem"></li>
@@ -245,7 +248,7 @@
                     </div>
 
                     <a href="/sherryreyesashe" target="_blank" class="avatarLink"
-                       onMouseDown="return clk(this, 1, 7715, 650021);"><img src=${resource(dir: 'images/random/', file: i + ".jpeg")} width="100" height="100"/></a>
+                       onMouseDown="return clk(this, 1, 7715, 650021);"><img src='${resource(dir: "images/random/", file: i + ".jpeg")}' width="100" height="100"/></a>
 
 
                     <div class="left" style="max-width:300px;">
@@ -287,7 +290,7 @@
                         <br/>
                         <br/>
 
-                        <li class="siteNavItem"><ul><a class ="rbutton" href="#" style="color:white;" onclick="alert('Спасибо! Вы зарегистрировались на этот курс');">ПРИСОЕДИНИТСЯ&nbsp;&nbsp;</a></ul></li>
+                        <li class="siteNavItem"><ul><a class ="rbutton" href="#" style="color:white;" onclick="$(function() {alert('Спасибо! Вы зарегистрировались на этот курс');});">ПРИСОЕДИНИТСЯ&nbsp;&nbsp;</a></ul></li>
                     </div>
 
                 </div>
@@ -340,7 +343,7 @@
     </div>
 </footer>
 
-</div><!--end:wrapper-->
+</body><!--end:wrapper-->
 
 
 </html>
