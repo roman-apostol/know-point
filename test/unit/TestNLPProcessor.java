@@ -17,16 +17,8 @@ public class TestNLPProcessor extends TestCase{
   public void testNativeQuery() {
        NLPProcessor processor = new NLPProcessor();
 
-       SearchQuery query = new SearchQuery();
-       Price price = new Price();
-       price.setCriteria("<=");
-       price.setValue(300.0f);
-       query.setPrice(price);
 
-
-       SearchQuery result = processor.process("Я хочу учить Китайский в пятницу или четвер с 20:30 до 18:00 или сейчас возле Протассового Яра менее 300 дол");
-       assertEquals(query, result);
-
-
+       assertEquals("($PRICE<=2400.0)(18:00<= $TIME AND $TIME <= 20:30) OR ($DAY = 5) OR ($DAY = 4) OR ($STREET = 1) OR ($REGION = 2) OR $TAGS{учить(0.5)Китайский(1.0)}",
+               processor.process("Я хочу учить Китайский в пятницу или четвер с 20:30 до 18:00 или сейчас возле Протассового Яра или на Троещине менее 300 дол").toString());
    }
 }
