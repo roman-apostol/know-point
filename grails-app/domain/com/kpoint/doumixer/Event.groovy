@@ -11,7 +11,7 @@ class Event {
     int duration = 0
 
     static constraints = {
-        weekDay (inList :["Понедельник", "Вторник", "Среда", "Четверг", "Пятница", "Суббота", "Воскресенье"])
+        weekDay (inList :["Sunday", "Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday"])
         startHour(max: 23, min: 0)
         startMinute(max: 59, min: 0)
 

@@ -18,8 +18,8 @@ class School {
         name (blank: false, unique: true)
         address (blank:  false)
         email (email:true, blank: false)
-        schoolType(inList: ["Бизнес английский", "Бокс", "Макраме", "Французский", "Авто Школа"])
-        region (inList: ["Голосеевский", "Дарницкий", "Деснянский", "Днепровский", "Оболонский", "Печерский",
-        "Подольский", "Святошинский", "Соломенский", "Шевченковский"])
+        schoolType(inList: ["English", "Box", "Makrame", "German", "Auto School"], maxSize: 25)
+        region (inList: ["Darnytsia", "Desna", "Dnipro", "Holosiiv", "Obolon", "Pechersk",
+        "Podil", "Shevchenko", "Solomyanka", "Svyatoshyn"], maxSize: 25)
     }
 }
