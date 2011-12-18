@@ -89,10 +89,11 @@ public class Token {
         //Price
         tokens.put("мень", new Token("мень", "меньше", Context.PRICE, "<=", Type.EQUALITY));
         tokens.put("мене", new Token("мене", "менее", Context.PRICE, "<=", Type.EQUALITY));
-        tokens.put("деш", new Token("деш", "дешевле", Context.PRICE, "<=", Type.EQUALITY));
+        tokens.put("деш",  new Token("деш", "дешевле", Context.PRICE, "<=", Type.EQUALITY));
         tokens.put("боль", new Token("боль", "больше", Context.PRICE, ">=", Type.EQUALITY));
         tokens.put("доро", new Token("доро", "дороже", Context.PRICE, ">=", Type.EQUALITY));
-        tokens.put("цен", new Token("цен", "цена", Context.PRICE, "", Type.PRICE));
+        tokens.put("до",   new Token("до", "до", Context.PRICE, "<=", Type.EQUALITY));
+//        tokens.put("цен", new Token("цен", "цена", Context.PRICE, "", Type.PRICE));
         tokens.put("$price", new Token("$price", "цена", Context.PRICE, "", Type.PRICE));
         tokens.put("грн", new Token("грн", "грн", Context.PRICE, "grn", Type.CURRENCY));
         tokens.put("дол", new Token("дол", "долларов", Context.PRICE, "usd", Type.CURRENCY));
@@ -136,8 +137,9 @@ public class Token {
         tokens.put("или", new Token("или", "или", Context.CLASSES, "", Type.NONETAG));
         tokens.put("и", new Token("и", "и", Context.CLASSES, "", Type.NONETAG));
         tokens.put("на", new Token("на", "и", Context.CLASSES, "", Type.NONETAG));
-        tokens.put("до", new Token("до", "и", Context.CLASSES, "", Type.NONETAG));
+//        tokens.put("до", new Token("до", "и", Context.CLASSES, "", Type.NONETAG));
         tokens.put("с", new Token("с", "и", Context.CLASSES, "", Type.NONETAG));
+        tokens.put("цен", new Token("цен", "цена", Context.CLASSES, "", Type.NONETAG));
 
 
 

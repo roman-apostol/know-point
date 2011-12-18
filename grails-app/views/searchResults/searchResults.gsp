@@ -250,7 +250,7 @@
                         <h3 class="resultTitle">
 
                             <a href="/sherryreyesashe" target="_blank"
-                               onMouseDown="return clk(this, 1, 7715, 650021);">${group.name}</a>
+                               onMouseDown="return clk(this, 1, 7715, 650021);"></a>
 
                         </h3>
                         <span class="resultTagline" style="margin-bottom:19px">Бизнес английский  | <span class="resultBusiness">Обучение</span> </span>
