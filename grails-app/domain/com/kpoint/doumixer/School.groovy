@@ -9,6 +9,8 @@ class School {
     String address
     String phoneNumber
     String email
+    String region
+
 
 
     static hasMany = [teachers: Teacher]
@@ -16,6 +18,8 @@ class School {
         name (blank: false, unique: true)
         address (blank:  false)
         email (email:true, blank: false)
-        schoolType(inList: ["English", "Boxing", "Makrame", "Franche", "Auto School", "Web Design", "Photoshop"])
+        schoolType(inList: ["Бизнес английский", "Бокс", "Макраме", "Французский", "Авто Школа"])
+        region (inList: ["Голосеевский", "Дарницкий", "Деснянский", "Днепровский", "Оболонский", "Печерский",
+        "Подольский", "Святошинский", "Соломенский", "Шевченковский"])
     }
 }

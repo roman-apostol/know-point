@@ -11,8 +11,9 @@ class Event {
     int duration = 0
 
     static constraints = {
-        weekDay inList: new DateFormatSymbols().getWeekdays().toList()
+        weekDay (inList :["Понедельник", "Вторник", "Среда", "Четверг", "Пятница", "Суббота", "Воскресенье"])
         startHour(max: 23, min: 0)
         startMinute(max: 59, min: 0)
+
     }
 }
