@@ -23,6 +23,10 @@ public class TestNLPProcessor extends TestCase{
        price.setValue(300.0f);
        query.setPrice(price);
 
-       assertEquals(query, processor.process("Я хочу учить Китайский в пятницу или четвер с 20:30 до 18:00 или сейчас возле Протассового Яра менее 300 дол"));
+
+       SearchQuery result = processor.process("Я хочу учить Китайский в пятницу или четвер с 20:30 до 18:00 или сейчас возле Протассового Яра менее 300 дол");
+       assertEquals(query, result);
+
+
    }
 }
