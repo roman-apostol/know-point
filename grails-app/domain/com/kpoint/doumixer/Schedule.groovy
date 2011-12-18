@@ -11,4 +11,7 @@ class Schedule {
         startDate (blank:false)
         endDate (blank: false)
     }
+    
+    static mapping = {
+    }
 }
