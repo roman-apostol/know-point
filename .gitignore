@@ -1,3 +1,6 @@
 *.iml
-/know-point
-.idea/**
+know-point/
+.idea
+*.class
+target/
+classes/
