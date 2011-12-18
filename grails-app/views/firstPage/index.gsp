@@ -142,7 +142,8 @@
         <section role="main" class="clearfix fullWidth">
 
             <div id="searchBlock" class="fullWidth hpHeader">
-                <form action="/search" method="GET">
+              <g:form action="search" method="POST" name="form1">
+                %{--<form action="${ac}" method="GET">--}%
                     <div id="searchBar2">
                         <!--<h1><span class="teal">Найдите</span> и <span class="teal">запишитесь</span> на курсы возле Вас</h1> -->
                         <br/>
@@ -166,14 +167,14 @@
                         <ul>
                             <li class="siteNavItem"></li>
 
-                            <li class="siteNavItem"><a class= "rbutton" href="/search">Все курсы</a></li>
+                            <li class="siteNavItem"><a class= "rbutton" href="#" onclick="document.form1.submit()">Все курсы</a></li>
                             <li class="siteNavItem">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</li>
                             <li class="siteNavItem">&nbsp;</li>
                             <li class="siteNavItem">&nbsp;</li>
                             <li class="siteNavItem "><a class= "rbutton" href="/photos">Расширенный поиск</a></li>
                         </ul>
                     </div>
-                </form>
+                </g:form>
             </div>
 
 
