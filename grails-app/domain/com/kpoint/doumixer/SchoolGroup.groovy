@@ -8,7 +8,6 @@ class SchoolGroup {
     String name
 
 
-    static hasMany = [events: Event]
     static constraints = {
         level(inList: ["Elementary", "Pre Intermediate", "Intermediate", "Upper Intermediate", "Advanced"])
     }
