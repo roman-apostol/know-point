@@ -21,6 +21,6 @@ class School {
         email (email:true, blank: false)
         schoolType(inList: ["English", "Box", "Makrame", "German", "Auto School"], maxSize: 25)
         region (inList: ["Darnytsia", "Desna", "Dnipro", "Holosiiv", "Obolon", "Pechersk",
-        "Podil", "Shevchenko", "Solomyanka", "Svyatoshyn"], maxSize: 25)
+        "Podil", "Shevchenko", "Solomyanka", "Svyatoshyn",'Troeshina'], maxSize: 25)
     }
 }
