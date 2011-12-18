@@ -22,17 +22,7 @@
     </head>
 <body id="pgHomepage">
 
-  <script type="text/javascript" src="http://cdn1.styleseat.com/static/js/min/ssnew.aaec336b.js"></script>
 
-
-
-    <!--  start tracking code  -->
-    <script type="text/javascript">
-        var campaign_var = "";
-        var from_var = "";
-    </script>
-    
-  
 <script language="javascript">
 $j(document).ready(function(){
     $j('#logoutLink').click(function() {
@@ -128,7 +118,27 @@ $j(document).ready(function(){
 		      <ul id="tools">
 		        <li class="it01"><div class="padMe"><a href="/signup">Внести свою школу</a></div></li>
 		        
-		        <li><div class="padMe"><a href="/login?next=/"><img src ="http://www.handforyou.org/images/facebook_logo.png" width ='15'/>Войти</a></div></li>
+		        <li><div class="padMe">
+			      <div id="fb-root"></div>
+			      <script>
+			        window.fbAsyncInit = function() {
+			          FB.init({
+			            appId      : '144441118955168',
+			            status     : true, 
+			            cookie     : true,
+			            xfbml      : true,
+			            oauth      : true,
+			          });
+			        };
+			        (function(d){
+			           var js, id = 'facebook-jssdk'; if (d.getElementById(id)) {return;}
+			           js = d.createElement('script'); js.id = id; js.async = true;
+			           js.src = "//connect.facebook.net/en_US/all.js";
+			           d.getElementsByTagName('head')[0].appendChild(js);
+			         }(document));
+			      </script>
+			      <div class="fb-login-button">Войти через Facebook</div>
+			</div></li>
 		  	  </ul><!--end:tools-->
               
 		      
@@ -250,7 +260,9 @@ $j(document).ready(function(){
           <li><a href="/site/about_us">Команда</a></li>
           <li><a href="/tos">Условия пользования</a></li>
         </ul>
-      </div>
+<br/>
+<br/>      
+</div>
     </footer>
         
   </div><!--end:wrapper-->
