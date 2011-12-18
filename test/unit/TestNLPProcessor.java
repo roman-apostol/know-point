@@ -3,7 +3,7 @@
 
 import junit.framework.TestCase;
 import org.junit.Test;
-import com.kpoint.doumixer.nlp;
+import com.kpoint.doumixer.nlp.*;
 
 /**
  * Created by IntelliJ IDEA.
@@ -14,9 +14,15 @@ import com.kpoint.doumixer.nlp;
  */
 public class TestNLPProcessor extends TestCase{
    @Test
-   void testNativeQuery() {
-       NLPProcessor proccessor = new NLPProcessor();
+  public void testNativeQuery() {
+       NLPProcessor processor = new NLPProcessor();
 
-       assertEquals("zzz.txt", getName(fileSpec));
+       SearchQuery query = new SearchQuery();
+       Price price = new Price();
+       price.setCriteria("<=");
+       price.setValue(300.0f);
+       query.setPrice(price);
+
+       assertEquals(query, processor.process("Я хочу учить Китайский в пятницу или четвер с 20:30 до 18:00 или сейчас возле Протассового Яра менее 300 дол"));
    }
 }
