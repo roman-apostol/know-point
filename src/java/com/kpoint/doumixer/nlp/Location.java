@@ -22,6 +22,10 @@ public class Location implements SearchQueryData{
         return false;
     }
 
+    public ArrayList<String> getRegions() {
+        return regions;
+    }
+
     public void addWord(String word, Token token) {
 
         switch (token.getType()) {
