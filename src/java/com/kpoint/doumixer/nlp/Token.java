@@ -16,7 +16,8 @@ public class Token {
     public enum Context { PRICE, CLASSES, TIME, LOCATION }
     public enum Type { EQUALITY, CURRENCY, PRICE,
                        DAY, DATE, TIME, NOW,
-                       NEAR, REGION, STREET }
+                       NEAR, REGION, STREET,
+                       MAINTAG, SECONDARYTAG, NONETAG}
     private String properties = "";
     private String shorttext = "";
     private String fulltext = "";
@@ -92,7 +93,7 @@ public class Token {
         tokens.put("боль", new Token("боль", "больше", Context.PRICE, ">=", Type.EQUALITY));
         tokens.put("доро", new Token("доро", "дороже", Context.PRICE, ">=", Type.EQUALITY));
         tokens.put("цен", new Token("цен", "цена", Context.PRICE, "", Type.PRICE));
-        tokens.put("price", new Token("price", "цена", Context.PRICE, "", Type.PRICE));
+        tokens.put("$price", new Token("$price", "цена", Context.PRICE, "", Type.PRICE));
         tokens.put("грн", new Token("грн", "грн", Context.PRICE, "grn", Type.CURRENCY));
         tokens.put("дол", new Token("дол", "долларов", Context.PRICE, "usd", Type.CURRENCY));
         tokens.put("$", new Token("$", "$", Context.PRICE, "usd", Type.CURRENCY));
@@ -107,7 +108,7 @@ public class Token {
         tokens.put("воск", new Token("воск", "воскересение", Context.TIME, "7", Type.DAY));
 
         tokens.put("сей", new Token("сей", "сейчас", Context.TIME, "now", Type.NOW));
-        tokens.put("time", new Token("time", "сейчас", Context.TIME, "", Type.TIME));
+        tokens.put("$time", new Token("$time", "time", Context.TIME, "", Type.TIME));
 
 
 
@@ -117,6 +118,7 @@ public class Token {
         tokens.put("здесь", new Token("здесь", "здесь", Context.LOCATION, "1", Type.REGION));
         tokens.put("голосе", new Token("голосе", "голосеево", Context.LOCATION, "1", Type.REGION));
         tokens.put("троещ", new Token("троещ", "троещина", Context.LOCATION, "2", Type.REGION));
+        tokens.put("прота", new Token("прота", "протасов", Context.LOCATION, "1", Type.STREET));
 
 
 
@@ -124,8 +126,19 @@ public class Token {
         //
 
         //tokens.put("", new Token("", "", Context.CLASSES, ""));
-        tokens.put("кита", new Token("кита", "китайский", Context.CLASSES, ""));
-        tokens.put("бокс", new Token("бокс", "бокс", Context.CLASSES, ""));
+        tokens.put("кита", new Token("кита", "китайский", Context.CLASSES, "", Type.MAINTAG));
+        tokens.put("бокс", new Token("бокс", "бокс", Context.CLASSES, "", Type.MAINTAG));
+        tokens.put("$secondary", new Token("$secondary", "$secondary", Context.CLASSES, "", Type.SECONDARYTAG));
+
+        tokens.put("в", new Token("в", "в", Context.CLASSES, "", Type.NONETAG));
+        tokens.put("я", new Token("я", "ч", Context.CLASSES, "", Type.NONETAG));
+        tokens.put("хочу", new Token("хочу", "", Context.CLASSES, "", Type.NONETAG));
+        tokens.put("или", new Token("или", "или", Context.CLASSES, "", Type.NONETAG));
+        tokens.put("и", new Token("и", "и", Context.CLASSES, "", Type.NONETAG));
+        tokens.put("на", new Token("на", "и", Context.CLASSES, "", Type.NONETAG));
+        tokens.put("до", new Token("до", "и", Context.CLASSES, "", Type.NONETAG));
+        tokens.put("с", new Token("с", "и", Context.CLASSES, "", Type.NONETAG));
+
 
 
         return tokens;

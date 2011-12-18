@@ -36,57 +36,47 @@ public class NLPProcessor {
         SearchQuery resQuery= new SearchQuery();
         String[] words = rowQuery.split(" ");
 
-        System.out.println("Row: " + rowQuery);
-        for (String word : words) {
-            System.out.println(word);
-        }
-
+        //System.out.println("Row: " + rowQuery);
 
         //Tokens search
         Pattern pNumber = Pattern.compile("\\d+");
         Pattern pTime = Pattern.compile("\\d[\\d]:\\d\\d");
         for (String word : words) {
             int minDistance = Integer.MAX_VALUE - 1;
-            Token minToken = null;
+            Token minToken = tokens.get("$secondary");
 
             if (pNumber.matcher(word).matches())
-                this.words.put(word, tokens.get("price"));
+                this.words.put(word, tokens.get("$price"));
             else
                 if (pTime.matcher(word).matches())
-                    this.words.put(word, tokens.get("time"));
+                    this.words.put(word, tokens.get("$time"));
                 else {
+                    for (Token token : tokens.values()) {
+                        int curDistance = token.compare(word);
 
+                        if (minDistance > curDistance) {
+                            minDistance = curDistance;
+                            minToken = token;
 
-
-                for (Token token : tokens.values()) {
-                    int curDistance = token.compare(word);
-                    //System.out.println("    " + word + "; token: " + token.getShorttext() + " dist: " + curDistance);
-                    if (minDistance > curDistance) {
-                        minDistance = curDistance;
-                        minToken = token;
-                        //System.out.println("    " + word + "; token: " + minToken.getShorttext() + " dist: " + minDistance);
+                        }
                     }
+
+                    this.words.put(word, minDistance==0?minToken:tokens.get("$secondary"));
                 }
 
-                if (minDistance == 0) {
-                    this.words.put(word, minToken);
-                }
-                else {
-                    this.words.put(word, new Token("", "", Token.Context.CLASSES, "unknown") );
-                }
-
-            }
-
-            switch (this.words.get(word).getContext()) {
-               case PRICE: resQuery.getPrice().addWord(word, this.words.get(word));
-               case TIME: resQuery.getTime().addWord(word, this.words.get(word));
-            }
-
-            if (minToken != null)
-                System.out.println(word + "; token: " + minToken.getShorttext() + " dist: " + minDistance);
+            //if (minToken != null)
+                //System.out.println(word + "; token: " + minToken.getShorttext() + " dist: " + minDistance);
         }
 
-            resQuery.getPrice().toString();
+        for (String word : words) {
+            switch (this.words.get(word).getContext()) {
+                case PRICE: resQuery.getPrice().addWord(word, this.words.get(word)); break;
+                case TIME: resQuery.getTime().addWord(word, this.words.get(word)); break;
+                case LOCATION: resQuery.getLocation().addWord(word, this.words.get(word)); break;
+                case CLASSES: resQuery.getCcontent().addWord(word, this.words.get(word)); break;
+            }
+        }
+
         return resQuery;
     }
 

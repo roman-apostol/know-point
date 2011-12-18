@@ -13,7 +13,25 @@ public class SearchQuery {
     private Price price = new Price();
     private Time time = new Time();
     private Location location = new Location();
+
+    public ClassesContent getCcontent() {
+        return ccontent;
+    }
+
+    public void setCcontent(ClassesContent ccontent) {
+        this.ccontent = ccontent;
+    }
+
     private ClassesContent ccontent = new ClassesContent();
+
+
+    public Location getLocation() {
+        return location;
+    }
+
+    public void setLocation(Location location) {
+        this.location = location;
+    }
 
     public Price getPrice() {
         return price;
@@ -27,11 +45,19 @@ public class SearchQuery {
         StringBuilder squery = new StringBuilder();
 
         if (price != null) {
-            squery.append("{PRICE}" + price.toString());
+            squery.append(price.toString());
         }
 
         if (time != null) {
             squery.append(time.toString());
+        }
+
+        if (location != null) {
+            squery.append(location.toString());
+        }
+
+        if (ccontent != null) {
+            squery.append(ccontent.toString());
         }
 
         return squery.toString();

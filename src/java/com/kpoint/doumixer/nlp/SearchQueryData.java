@@ -1,5 +1,7 @@
 package com.kpoint.doumixer.nlp;
 
+
+
 /**
  * Created by IntelliJ IDEA.
  * User: MatFuck
@@ -8,4 +10,11 @@ package com.kpoint.doumixer.nlp;
  * To change this template use File | Settings | File Templates.
  */
 public interface SearchQueryData {
+    public void addWord(String word, Token token);
+
+    public String toString();
+
+    public boolean isEmpty();
+
+    public boolean equals(Object o);
 }

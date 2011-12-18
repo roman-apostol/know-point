@@ -32,7 +32,6 @@ public class Time {
         }
 
     public void addWord(String word, Token token) {
-        System.out.println(word + " " + token.getType());
 
         switch (token.getType()) {
             case DAY: days.add(Integer.parseInt(token.getProperties()));
@@ -62,7 +61,7 @@ public class Time {
         }
         
         if (date != null) {
-            squery.append(" OR ({DATE}" + (new SimpleDateFormat("yyyy-MM-dd HH:mm:ss")).format(date) + ")");
+            squery.append(" OR ($DATE = " + (new SimpleDateFormat("yyyy-MM-dd HH:mm:ss")).format(date) + ")");
         }
 
         return squery.toString();

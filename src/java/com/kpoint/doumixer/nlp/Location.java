@@ -13,23 +13,16 @@ import java.util.Date;
  * Time: 15:09
  * To change this template use File | Settings | File Templates.
  */
-public class Location {
+public class Location implements SearchQueryData{
 
     private ArrayList<String> regions = new ArrayList<String>();
     private ArrayList<String> streets = new ArrayList<String>();
 
-    public boolean equals(Time t) {
+    public boolean equals(Location l) {
         return false;
     }
 
     public void addWord(String word, Token token) {
-        System.out.println(word + " " + token.getType());
-
-        tokens.put("рядо", new Token("рядо", "рядом", Context.LOCATION, "near", Type.NEAR));
-        tokens.put("возл", new Token("возл", "возле", Context.LOCATION, "near", Type.NEAR));
-        tokens.put("здесь", new Token("здесь", "здесь", Context.LOCATION, "1", Type.REGION));
-        tokens.put("голосе", new Token("голосе", "голосеево", Context.LOCATION, "1", Type.REGION));
-        tokens.put("троещ", new Token("троещ", "троещина", Context.LOCATION, "2", Type.REGION));
 
         switch (token.getType()) {
             case REGION: regions.add(token.getProperties());
@@ -44,29 +37,19 @@ public class Location {
     public String toString() {
         StringBuilder squery = new StringBuilder();
 
-        int i;
-        for(i = 0; (i+1) < times.size(); i+=2) {
-            squery.append( "(" + times.get(i) + "<= $TIME AND " +  "$TIME <= " + times.get(i+1) + ") OR ");
+        for(String street : streets) {
+            squery.append("($STREET = " + street + ") OR ");
         }
 
-        if (i < times.size()) {
-            squery.append( "(" + times.get(i) + "<= $TIME)");
-        }
-
-
-        for(Integer day : days) {
-            squery.append("($DAY = " + day + ") OR ");
-        }
-
-        if (date != null) {
-            squery.append(" OR ({DATE}" + (new SimpleDateFormat("yyyy-MM-dd HH:mm:ss")).format(date) + ")");
+        for(String region : regions) {
+            squery.append("($REGION = " + region + ") OR ");
         }
 
         return squery.toString();
     }
 
     public boolean isEmpty() {
-        if ((days.size() > 0) && (date != null) && (times.size() > 0)) {
+        if ((regions.size() > 0) && (regions.size() > 0)) {
             return false;
         }
         else {

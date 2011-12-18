@@ -55,7 +55,7 @@ public class Price {
 
     public String toString() {
         if ((criteria != null) && (value != null)) {
-            return criteria + (coef * value);
+            return "($PRICE" + criteria + (coef * value) + ")";
         }
         else {
             return "";
@@ -63,8 +63,6 @@ public class Price {
     }
 
     public void addWord(String word, Token token) {
-        System.out.println(word + " " + token.getType());
-                
         switch (token.getType()) {
             case EQUALITY:setCriteria(token.getProperties());
                 break;
