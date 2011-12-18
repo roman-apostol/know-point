@@ -1,11 +1,18 @@
 package com.kpoint.doumixer
 
-class FirstPageController {
+import com.kpoint.doumixer.nlp.NLPProcessor
 
+class FirstPageController {
+   static def nmSearcher = new NLPProcessor();
     def index()  { }
     def search() {
         println params;
-        forward(action: "index");
+        def criteria = nmSearcher.process(params.q);
+       // println criteria ;
+        
+        params.searchQuery = criteria;
+        
+        forward( controller: 'searchResults', action: 'searchResults', params: params);
     }
 }
 
